@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+struct trojkat{
+    float a,b,c;
+};
+
+
+float obwod(struct trojkat t ){
+float obw;
+obw=t.a+t.b+t.c;
+return obw;
+}
+double punkt{
+    double x,y,z;
+};
+
+typedef struct trojkat troj;
+void przepisz(struct trojkat troj1, struct trojkat*troj2){
+    *troj2=troj1;
+}
+
+int main(){
+
+  struct trojkat t;
+    t.a=3.6;
+    t.b=4.4;
+    t.c=3.2;
+
+float z;
+z=obwod(t);
+    printf("Obwod to :%.2f\n",z);
+    return 0;
+}
