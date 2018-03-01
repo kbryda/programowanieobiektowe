@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 class trojkat
@@ -11,20 +12,43 @@ class punkt
 private:
     float x,y;
 public:
-   void setX(float x)
+    punkt(float x,float y){
+        this->x = x;
+        this->y = y;
+    }
+    punkt(float x){
+        this->x=x;
+        y=0.0;
+    }
+    float distance(punkt p,punkt w ){
+    float xP=pow(p.getX()-w.getX(),2.0);
+     float yP=pow(p.getY()-w.getY(),2.0);
+     return sqrt(xP +yP);
+    }
+
+  /* void setX(float x)
     {
     this->x = x;
 }
-   float getX(){
-       return x;
-   }
+
    void setY(float y)
     {
     this->y = y;
-}
+}*/
+    float getX(){
+        return x;
+    }
    float getY(){
        return y;
    }
+   void move(float x,float y){
+   this ->x+= x;
+   this ->y+= y;
+   }
+  // void move1(punkt p){
+   //    x+=p.getX();
+  //     y+=p.getY();
+  // }
 };
 
 class klasaTestowa
@@ -37,16 +61,18 @@ int main()
 {
 
     klasaTestowa t= klasaTestowa();
-int x;
-    int y;
+//int x,y;
    // cout<<"Podaj x,y"<<endl;
    // cin>>x>>y;
     //cout<<"Test "<<x<<" drugi "<<y<<endl;
-    t.test=5;
-    punkt p=punkt();
+   // t.test=5;
+    //punkt p=punkt();
+    punkt w= punkt(4.5,6.7);
 
-    p.setX(6.478);
-    p.setY(478.3);
-    cout<<p.getX() <<" "<< p.getY()<<endl;
+   // p.setX(3);
+   // p.setY(6);
+    //cout<<p.getX() <<" "<< p.getY()<<endl;
+   // p.move1(p);
+    //cout<<p.getX() <<" "<< p.getY()<<endl;
     return 0;
 }
