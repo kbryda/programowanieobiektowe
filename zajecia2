@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+class trojkat
+{
+public:
+    double a,b,c;
+};
+class punkt
+{
+private:
+    float x,y;
+public:
+   void setX(float x)
+    {
+    this->x = x;
+}
+   float getX(){
+       return x;
+   }
+   void setY(float y)
+    {
+    this->y = y;
+}
+   float getY(){
+       return y;
+   }
+};
+
+class klasaTestowa
+{
+public:
+    int test;
+};
+
+int main()
+{
+
+    klasaTestowa t= klasaTestowa();
+int x;
+    int y;
+   // cout<<"Podaj x,y"<<endl;
+   // cin>>x>>y;
+    //cout<<"Test "<<x<<" drugi "<<y<<endl;
+    t.test=5;
+    punkt p=punkt();
+
+    p.setX(6.478);
+    p.setY(478.3);
+    cout<<p.getX() <<" "<< p.getY()<<endl;
+    return 0;
+}
