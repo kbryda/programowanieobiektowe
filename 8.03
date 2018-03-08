@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <fstream>
+using namespace std;
+
+
+
+int main()
+{
+    string n1 ="Hello";
+    string n2 ="World";
+    string n3 ="!";
+    string n4=n1+n2;
+    string n5;
+cin>> n5;
+    char min ='z';
+    char max ='a';
+transform(n5.begin(),n5.end(),n5.begin(),::tolower);
+    for(char c : n5){
+        if(c<min&& c!=' ')
+        min=c;
+        if(c>max)
+         max=c;
+}
+
+    cout<<n5<< " "<<n5.size()<<endl;
+
+    cout<<"min :"<<min<<endl;
+    cout<<"max :"<<max<<endl;
+    string s1="iterator";
+    string s2="ator";
+   /* string iterator::its2=s2.begin();
+    for(string::iterator it=s1.begin(); it!=s1.end();it++){
+
+        if(its2==s2.end())
+        {cout<<"n1 zawiera się w n2"<<endl;
+            return 0;
+        }
+        else if(*int1 ==*its2)
+            its2++;
+        else
+            its2=s2.begin();
+
+    }
+*/
+    ofstream plik;
+    plik.open("*/test.txt");
+    plik<<"Test zapisu";
+    plik.close();
+    string wiersz;
+
+    ifstream plik2;
+    plik2.open("*/test.txt");
+    while(getline(plik2,wiersz))
+        cout<<wiersz<<endl;
+    plik2.close();
+
+
+    return 0;
+}
